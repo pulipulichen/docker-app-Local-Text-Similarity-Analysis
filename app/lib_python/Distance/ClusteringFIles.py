@@ -8,7 +8,8 @@ def ClusteringFIles(df):
   pd.options.display.max_columns = None
 
   outliers = GetOutliers(df)
-  
+  print(outliers)
+
   # G = nx.barbell_graph(5, 1)
   G = nx.Graph()
   df['value_norm'] = (df['value']-df['value'].min())/(df['value'].max()-df['value'].min())
@@ -28,6 +29,15 @@ def ClusteringFIles(df):
   # print(output)
 
   output = community.louvain_communities(G, weight='weight', seed=123)
+  print(output)
+
+  output = community.louvain_communities(G, weight='weight', resolution = 2, seed=123)
+  print(output)
+
+  output = community.louvain_communities(G, weight='weight', resolution = 3, seed=123)
+  print(output)
+
+  output = community.louvain_communities(G, weight='weight', resolution = 4, seed=123)
   print(output)
 
   G = nx.petersen_graph()
