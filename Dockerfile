@@ -11,4 +11,6 @@ RUN pip install pandas==1.5.3
 COPY app/lib_java/tika-server-standard-2.6.0.jar /tmp/tika-server.jar
 COPY app/lib_java/tika-server-standard-2.6.0.jar.md5 /tmp/tika-server.jar.md5
 
+RUN pip install networkx==3.0
+
 CMD ["bash"]

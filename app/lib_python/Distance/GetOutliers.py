@@ -8,6 +8,4 @@ def GetOutliers(df):
   outliers = sources + targets
   outliers = list(set(outliers))
 
-  print(outliers)
-
   return outliers
