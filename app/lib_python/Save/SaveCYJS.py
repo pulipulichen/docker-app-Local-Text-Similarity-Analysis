@@ -6,8 +6,13 @@ def SaveCYJS(G, filename):
 
   pos = nx.spring_layout(G)
   nodes = cyjs['elements']['nodes']
-  print(nodes)
+  for node in nodes:
+    data = node['data']
+    id = data['id']
 
+    node["position"]["x"] = pos[id][0]
+    node["position"]["y"] = pos[id][1]
+  print(node)
 
   cyjs = json.dumps(cyjs, ensure_ascii=False)
 
