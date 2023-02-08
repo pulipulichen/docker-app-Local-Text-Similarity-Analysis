@@ -7,4 +7,4 @@ def find_outliers_IQR(df):
   return outliers
 
 def CalcDistanceOutlier(df):
-  print(find_outliers_IQR(df['value']))
+  print(len(find_outliers_IQR(df['value'])))
