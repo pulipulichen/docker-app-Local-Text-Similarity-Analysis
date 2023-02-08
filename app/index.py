@@ -35,4 +35,4 @@ for entry in entries:
   if last_entry is not None:
     files[entry] = last_entry
  
-print(files)
+print(files, indent=4)
