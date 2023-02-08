@@ -12,7 +12,10 @@ def ClusteringFIles(df):
   graph_df = df[['source', 'target', 'weight']]
   elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
-  print(nx.to_pandas_edgelist(G).set_option('display.max_columns', None))
+  
+  df_G = nx.to_pandas_edgelist(G)
+  df_G.options.display.max_columns = None
+  print(df_G)
 
   # communities_generator = community.girvan_newman(G)
   # top_level_communities = next(communities_generator)
@@ -24,6 +27,8 @@ def ClusteringFIles(df):
   # print(output)
 
   G = nx.petersen_graph()
-  print(nx.to_pandas_edgelist(G).set_option('display.max_columns', None))
+  df_G = nx.to_pandas_edgelist(G)
+  df_G.options.display.max_columns = None
+  print(df_G)
   output = community.louvain_communities(G, seed=123)
   print(output)
