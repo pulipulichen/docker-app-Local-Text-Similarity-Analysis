@@ -12,9 +12,9 @@ def ClusteringFIles(df):
   # G = nx.barbell_graph(5, 1)
   G = nx.Graph()
   df['weight'] = 1/ df['value']
-  # df['weight_norm'] = (df['weight'] - df['weight'].mean()) / df['weight'].std()
+  df['weight_norm'] = df['weight']-df['weight'].min())/(df['weight'].max()-df['weight'].min()
 
-  graph_df = df[['source', 'target', 'weight']]
+  graph_df = df[['source', 'target', 'weight_norm']]
   elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
   
