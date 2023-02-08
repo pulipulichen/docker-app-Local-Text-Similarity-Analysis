@@ -10,6 +10,7 @@ def SaveCYJS(G, filename):
     data = node['data']
     id = data['id']
 
+    node["position"] = {}
     node["position"]["x"] = pos[id][0]
     node["position"]["y"] = pos[id][1]
   print(node)
