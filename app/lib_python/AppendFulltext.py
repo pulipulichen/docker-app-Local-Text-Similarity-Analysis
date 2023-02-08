@@ -4,7 +4,7 @@ import os
 # import parser object from tike
 from tika import parser  
 
-def AppendSize(files):
+def AppendFulltext(files):
   # 加上檔案大小
   for i, file in enumerate(files):
     parsed_file = parser.from_file(file['file'])
