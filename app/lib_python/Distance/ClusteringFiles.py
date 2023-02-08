@@ -17,6 +17,7 @@ def ClusteringFiles(df, files):
 
   outliers = GetOutliers(df)
   print(outliers)
+  files['is_outlier'] = files['user'].isin(outliers)
 
   # G = nx.barbell_graph(5, 1)
   G = nx.Graph()
