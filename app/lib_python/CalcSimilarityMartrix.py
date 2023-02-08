@@ -4,9 +4,9 @@ from fastDamerauLevenshtein import damerauLevenshtein
 def CalcSimilarityMartrix(files):
   martix = []
 
-  combinations = list(combinations(range(0, len(files)),2))
-  for combination in combinations:
-    print(combination[0] + '-' + combination[1])
+  pairs = list(combinations(range(0, len(files)),2))
+  for pair in pairs:
+    print(pair[0] + '-' + pair[1])
   
   distance = damerauLevenshtein('ca', 'abc', similarity=False)
   print(distance)
