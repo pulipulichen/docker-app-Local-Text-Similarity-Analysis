@@ -6,7 +6,7 @@ def AddOutlierAttribute(G, outliers):
 
   outliers_dict = {}
   for node in nodes:
-    outliers_dict[node] = node.isin(outliers)
+    outliers_dict[node] = (outliers.find(node) > -1)
 
   print(outliers_dict)
   # for outlier in outliers:
