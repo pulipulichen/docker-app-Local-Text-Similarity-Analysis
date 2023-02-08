@@ -31,7 +31,7 @@ cluster_dict = ClusteringFiles(G)
 files['cluster'] = files['user'].replace(cluster_dict)
 
 from lib_python.Save.SaveCYJS import *
-SaveCYJS(files, filename)
+SaveCYJS(G, filename)
 
 from lib_python.Save.SaveODS import *
 SaveODS(files, filename)
