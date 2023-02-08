@@ -6,13 +6,15 @@ import pandas as pd
 def ClusteringFIles(df):
 
   pd.options.display.max_columns = None
-  
+
   outliers = GetOutliers(df)
   
   # G = nx.barbell_graph(5, 1)
   G = nx.Graph()
   df['weight'] = 1/ df['value']
-  graph_df = df[['source', 'target', 'weight']]
+  df['weight_norm'] = (df['weight'] - df['weight'].mean()) / df['weight'].std()
+
+  graph_df = df[['source', 'target', 'weight_norm']]
   elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
   
@@ -25,8 +27,8 @@ def ClusteringFIles(df):
   # output = sorted(map(sorted, next_level_communities))
   # print(output)
 
-  # output = community.louvain_communities(G, weight='weight', seed=123)
-  # print(output)
+  output = community.louvain_communities(G, weight='weight', seed=123)
+  print(output)
 
   G = nx.petersen_graph()
   df_G = nx.to_pandas_edgelist(G)
