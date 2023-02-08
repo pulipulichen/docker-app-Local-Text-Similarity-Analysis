@@ -1,9 +1,12 @@
 import networkx as nx
 from networkx.algorithms import community
 from .GetOutliers import *
+import pandas as pd
 
 def ClusteringFIles(df):
 
+  pd.options.display.max_columns = None
+  
   outliers = GetOutliers(df)
   
   # G = nx.barbell_graph(5, 1)
@@ -14,7 +17,6 @@ def ClusteringFIles(df):
   G.add_weighted_edges_from(elist)
   
   df_G = nx.to_pandas_edgelist(G)
-  df_G.options.display.max_columns = None
   print(df_G)
 
   # communities_generator = community.girvan_newman(G)
@@ -28,7 +30,6 @@ def ClusteringFIles(df):
 
   G = nx.petersen_graph()
   df_G = nx.to_pandas_edgelist(G)
-  df_G.options.display.max_columns = None
   print(df_G)
   output = community.louvain_communities(G, seed=123)
   print(output)
