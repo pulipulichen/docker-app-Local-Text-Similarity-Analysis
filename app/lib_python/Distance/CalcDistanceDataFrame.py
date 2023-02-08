@@ -1,7 +1,7 @@
 from itertools import combinations
 from fastDamerauLevenshtein import damerauLevenshtein
 import pandas as pd
-from CalcDistanceOutlier import *
+from .CalcDistanceOutlier import *
 
 def CalcDistanceDataFrame(files):
   df = pd.DataFrame()
