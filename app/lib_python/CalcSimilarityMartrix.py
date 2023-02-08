@@ -6,7 +6,7 @@ def CalcSimilarityMartrix(files):
 
   pairs = list(combinations(range(0, len(files)),2))
   for pair in pairs:
-    print(pair[0] + '-' + pair[1])
+    print(str(pair[0]) + '-' + str(pair[1]))
   
   distance = damerauLevenshtein('ca', 'abc', similarity=False)
   print(distance)
