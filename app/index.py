@@ -36,13 +36,19 @@ for entry in entries:
       last_entry = 'cache/' + entry + '/' + subentry
   
   if last_entry is not None:
-    file_stats = os.stat(last_entry)
-
     files.append({
       "user": entry,
-      "file": last_entry,
-      "modified_time": os.path.getmtime(last_entry),
-      "filesize": file_stats.st_size / (1024 * 1024)
+      "file": last_entry
     })
- 
+
+# 加上修改時間
+for i, file in enumerate(files):
+  files[i]['modified_time'] = os.path.getmtime(file['last_entry'])
+
+
+# 加上修改時間
+for i, file in enumerate(files):
+  file_stats = os.stat(last_entry)
+  files[i]['filesize'] = file_stats.st_size / (1024 * 1024)
+
 print(json.dumps(files, indent=4, ensure_ascii=False))
