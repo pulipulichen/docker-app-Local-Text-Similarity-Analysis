@@ -3,10 +3,13 @@
 import os
 from pathlib import Path
 
+from zipfile import ZipFile
+
 entries = os.listdir('input/')
 for entry in entries:
   if entry.endswith('.zip') == False:
     continue
-  print(entry)
-  file_stats = os.stat('input/' + entry)
-  print(file_stats.st_size)
+
+  with ZipFile('input/' + entry, 'r') as zObject:
+    zObject.extractall(
+        path='cache/')
