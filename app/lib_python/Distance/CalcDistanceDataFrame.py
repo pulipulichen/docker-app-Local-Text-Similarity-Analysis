@@ -11,8 +11,8 @@ def CalcDistanceDataFrame(files):
   for pair in pairs:
     # print(str(pair[0]) + '-' + str(pair[1]))
     
-    source = files.iloc[[pair[0]]].to_dict('r')[0]
-    target = files.iloc[[pair[1]]].to_dict('r')[0]
+    source = files.iloc[[pair[0]]].to_dict('records')[0]
+    target = files.iloc[[pair[1]]].to_dict('records')[0]
     distance = damerauLevenshtein(source['data'], target['data'], similarity=False)
     record = {
       "source": source["user"],
