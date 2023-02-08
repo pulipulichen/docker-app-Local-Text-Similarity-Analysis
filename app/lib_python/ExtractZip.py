@@ -4,10 +4,11 @@ from zipfile import ZipFile
 import subprocess
 
 def ExtractZip():
-  print(subprocess.run(['mv', '/cache/.gitignore', '/tmp'], capture_output=True))
-  print(subprocess.run(['rm', '-rf', '/cache/*.xlsx'], capture_output=True))
-  print(subprocess.run(['mv', '/tmp/.gitignore', '/cache/'], capture_output=True))
-  print(subprocess.run(['ls', '/cache/*'], capture_output=True))
+  print(subprocess.run(['ls', 'cache/*'], capture_output=True))
+  print(subprocess.run(['mv', 'cache/.gitignore', '/tmp'], capture_output=True))
+  print(subprocess.run(['rm', '-rf', 'cache/*.xlsx'], capture_output=True))
+  print(subprocess.run(['mv', '/tmp/.gitignore', 'cache/'], capture_output=True))
+  print(subprocess.run(['ls', 'cache/*'], capture_output=True))
 
   return False
   entries = os.listdir('input/')
