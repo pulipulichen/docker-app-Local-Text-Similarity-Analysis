@@ -4,7 +4,7 @@ import os
 # import parser object from tike
 from tika import parser  
 
-from diskcache import cache 
+from diskcache import Cache 
 cache = Cache()
 
 def extractContentFromFile(file):
