@@ -16,7 +16,7 @@ def ClusteringFiles(df, files):
   pd.options.display.max_columns = None
 
   outliers = GetOutliers(df)
-  print(outliers)
+  # print(outliers)
   files['is_outlier'] = files['user'].isin(outliers)
 
   # G = nx.barbell_graph(5, 1)
