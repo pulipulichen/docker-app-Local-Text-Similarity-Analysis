@@ -24,6 +24,6 @@ def ExtractZip():
       print('yes')
       print(subprocess.run(['ls', './cache/files/'], capture_output=True))
       subprocess.run(['mv', './cache/files/' + filename + '/*', './cache/files/'], capture_output=True)
-      subprocess.run(['rm', '-rf', './cache/files/' + filename], capture_output=True)
+      # subprocess.run(['rm', '-rf', './cache/files/' + filename], capture_output=True)
       print(subprocess.run(['ls', './cache/files/'], capture_output=True))
     return filename
