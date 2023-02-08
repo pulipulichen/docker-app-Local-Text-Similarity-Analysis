@@ -10,6 +10,7 @@ def BuildNetwork(df):
   elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
 
-  G = nx.spring_layout(G)
+  pos = nx.spring_layout(G)
+  nx.set_node_attributes(G,'pos',pos)
 
   return G
