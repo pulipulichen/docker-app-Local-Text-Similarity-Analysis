@@ -1,5 +1,6 @@
 import os
 from zipfile import ZipFile
+import shutil
 
 import subprocess
 
@@ -23,7 +24,10 @@ def ExtractZip():
     if os.path.isdir('cache/files/' + filename):
       print('yes')
       print(subprocess.run(['ls', './cache/files/'], capture_output=True).wait())
-      subprocess.run(['mv', './cache/files/' + filename + '/*', './cache/files/'], capture_output=True).wait()
+      # subprocess.run(['mv', './cache/files/' + filename + '/*', './cache/files/'], capture_output=True).wait()
+      file_names = os.listdir('./cache/files/' + filename)
+      for file_name in file_names:
+        shutil.move(os.path.join('./cache/files/' + filename, file_name), './cache/files/')
       # subprocess.run(['rm', '-rf', './cache/files/' + filename], capture_output=True).wait()
       print(subprocess.run(['ls', './cache/files/'], capture_output=True).wait())
     return filename
