@@ -14,7 +14,7 @@ from lib_python.Files.AppendFulltext import *
 files = AppendFulltext(files)
 
 from lib_python.Distance.CalcDistanceDataFrame import *
-distance_df = CalcDistanceDataFrame(files)
+files = CalcDistanceDataFrame(files)
 
 from lib_python.SaveODS import *
 SaveODS(files, filename)

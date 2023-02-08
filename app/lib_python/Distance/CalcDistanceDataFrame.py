@@ -2,7 +2,7 @@ from itertools import combinations
 from fastDamerauLevenshtein import damerauLevenshtein
 import pandas as pd
 from .CalcDistanceOutlier import *
-from .ClusteringFIles import *
+from .ClusteringFiles import *
 
 def CalcDistanceDataFrame(files):
   df = pd.DataFrame()
@@ -28,5 +28,5 @@ def CalcDistanceDataFrame(files):
 
   # print(df)
   # return False
-  df = ClusteringFIles(df)
+  df = ClusteringFiles(df)
   return df
