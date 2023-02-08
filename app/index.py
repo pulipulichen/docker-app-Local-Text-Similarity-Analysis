@@ -38,4 +38,4 @@ for entry in entries:
   if last_entry is not None:
     files[entry] = last_entry
  
-print(json.dumps(files, indent=4))
+print(json.dumps(files, indent=4, ensure_ascii=False))
