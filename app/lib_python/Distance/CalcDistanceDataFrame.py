@@ -9,7 +9,8 @@ def CalcDistanceDataFrame(files):
 
   pairs = list(combinations(range(0, len(files)),2))
   for pair in pairs:
-    # print(str(pair[0]) + '-' + str(pair[1]))
+    print(str(pair[0]) + '-' + str(pair[1]))
+    continue
     source = dict(files.iloc[[pair[0]]])
     target = dict(files.iloc[[pair[1]]])
     distance = damerauLevenshtein(source['data'], target['data'], similarity=False)
@@ -19,7 +20,7 @@ def CalcDistanceDataFrame(files):
       "value": distance
     }
     df = pd.concat([df, pd.DataFrame.from_records([record])])
-
+  return False
   # print(df)
   df = CalcDistanceOutlier(df)
 
