@@ -4,9 +4,9 @@ from zipfile import ZipFile
 import subprocess
 
 def ExtractZip():
-  subprocess.call(['mv /cache/.gitignore /tmp'])
-  subprocess.call(['rm -rf /cache/*'])
-  subprocess.call(['mv /tmp/.gitignore /cache/'])
+  print(subprocess.run(['mv', '/cache/.gitignore', '/tmp'], capture_output=True))
+  print(subprocess.call(['rm', '-rf', '/cache/*'], capture_output=True))
+  print(subprocess.call(['mv', '/tmp/.gitignore', '/cache/'], capture_output=True))
 
   return False
   entries = os.listdir('input/')
