@@ -5,7 +5,7 @@ from pathlib import Path
 
 entries = os.listdir('input/')
 for entry in entries:
-  if (!entry.endswith('.zip')):
+  if entry.endswith('.zip') == False:
     continue
   print(entry)
   file_stats = os.stat('input/' + entry)
