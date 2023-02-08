@@ -13,5 +13,6 @@ def SaveODS(files, filename):
   for file in files:
     output.append(file.values())
 
+  print(output)
   data.update({"data": output})
   save_data("input/" + filename + ".ods", data)
