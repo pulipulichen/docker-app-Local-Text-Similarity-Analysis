@@ -43,8 +43,7 @@ for entry in entries:
 
 # 加上修改時間
 for i, file in enumerate(files):
-  files[i]['modified_time'] = os.path.getmtime(file['last_entry'])
-
+  files[i]['modified_time'] = os.path.getmtime(file['file'])
 
 # 加上修改時間
 for i, file in enumerate(files):
