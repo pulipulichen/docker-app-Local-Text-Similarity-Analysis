@@ -11,6 +11,7 @@ def BuildNetwork(df):
   G.add_weighted_edges_from(elist)
 
   pos = nx.spring_layout(G)
-  nx.set_node_attributes(G,'pos',pos)
+  print(pos)
+  nx.set_node_attributes(G, 'pos', pos)
 
   return G
