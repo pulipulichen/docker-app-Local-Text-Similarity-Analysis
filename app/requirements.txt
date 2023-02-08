@@ -1,3 +1,4 @@
 tika==2.6.0
 pyexcel-ods==3 0.6.1
 fastDamerauLevenshtein==1.0.7
+pandas==1.5.3

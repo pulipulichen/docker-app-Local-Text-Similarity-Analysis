@@ -1,8 +1,9 @@
 from itertools import combinations
 from fastDamerauLevenshtein import damerauLevenshtein
+import pandas as pd
 
-def CalcSimilarityMartrix(files):
-  distance_list = []
+def CalcDistanceList(files):
+  df = pd.DataFrame()
 
   pairs = list(combinations(range(0, len(files)),2))
   for pair in pairs:
@@ -10,11 +11,11 @@ def CalcSimilarityMartrix(files):
     source = files[pair[0]]
     target = files[pair[1]]
     distance = damerauLevenshtein(source['data'], target['data'], similarity=False)
-    distance_list.append({
+    df.append({
       "source": source["user"],
       "target": target["user"],
       "value": distance
-    })
+    }, ignore_index=True)
 
-  print(distance_list)
-  return True
+  print(df)
+  return df
