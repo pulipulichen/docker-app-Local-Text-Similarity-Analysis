@@ -31,5 +31,5 @@ def ClusteringFiles(df, files):
   
   cluster_dict = getClusterDict(output)
 
-  files['cluster'] = cluster_dict[files['user']]
+  files['cluster'] = files['user'].replace(cluster_dict)
   return files
