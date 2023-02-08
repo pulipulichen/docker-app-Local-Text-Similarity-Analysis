@@ -28,5 +28,5 @@ def CalcDistanceDataFrame(files):
 
   # print(df)
   # return False
-  df = ClusteringFiles(df)
-  return df
+  files = ClusteringFiles(df, files)
+  return files
