@@ -32,26 +32,26 @@ def ClusteringFIles(df):
   print(output)
 
   output = community.louvain_communities(G, weight='weight', resolution = 1.1, seed=123)
-  print(output)
+  print(output) # 這個就夠了
 
-  output = community.louvain_communities(G, weight='weight', resolution = 1.2, seed=123)
-  print(1.2)
-  print(output)
+  # output = community.louvain_communities(G, weight='weight', resolution = 1.2, seed=123)
+  # print(1.2)
+  # print(output)
 
-  output = community.louvain_communities(G, weight='weight', resolution = 1.3, seed=123)
-  print(1.3)
-  print(output)
+  # output = community.louvain_communities(G, weight='weight', resolution = 1.3, seed=123)
+  # print(1.3)
+  # print(output)
 
-  output = community.louvain_communities(G, weight='weight', resolution = 1.5, seed=123)
-  print(1.5)
-  print(output)
+  # output = community.louvain_communities(G, weight='weight', resolution = 1.5, seed=123)
+  # print(1.5)
+  # print(output)
 
-  output = community.louvain_communities(G, weight='weight', resolution = 1.7, seed=123)
-  print(1.7)
-  print(output)
+  # output = community.louvain_communities(G, weight='weight', resolution = 1.7, seed=123)
+  # print(1.7)
+  # print(output)
 
-  output = community.louvain_communities(G, weight='weight', resolution = 2, seed=123)
-  print(output)
+  # output = community.louvain_communities(G, weight='weight', resolution = 2, seed=123)
+  # print(output)
 
   # output = community.louvain_communities(G, weight='weight', resolution = 3, seed=123)
   # print(output)

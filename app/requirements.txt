@@ -3,3 +3,4 @@ pyexcel-ods==3 0.6.1
 fastDamerauLevenshtein==1.0.7
 pandas==1.5.3
 networkx==3.0
+cachetools==5.3.0
