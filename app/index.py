@@ -30,8 +30,8 @@ from lib_python.Distance.ClusteringFiles import *
 cluster_dict = ClusteringFiles(G)
 files['cluster'] = files['user'].replace(cluster_dict)
 
-from lib_python.Distance.AddOutlierAttribute import *
-G = AddOutlierAttribute(G, outliers)
+from lib_python.Distance.AddNodeAttributes import *
+G = AddNodeAttributes(G, outliers, cluster_dict)
 
 from lib_python.Save.SaveCYJS import *
 SaveCYJS(G, filename)
