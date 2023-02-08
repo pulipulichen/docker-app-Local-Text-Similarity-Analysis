@@ -16,4 +16,5 @@ def AppendFulltext(files):
       
     # Printing of content 
     files[i]['data_length'] = len(data)
+    files[i]['data'] = data
   return files
