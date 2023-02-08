@@ -22,8 +22,11 @@ def extractContentFromFile(file):
   sql_cache.set(file, data)
   return data
 
+def getContentLength(data):
+  return len(data)
+
 def AppendFulltext(files):
   files['data'] = files['file'].apply(extractContentFromFile)
-  files['data_length'] = len(files['data'])
+  files['data_length'] = files['data'].apply(len)
 
   return files
