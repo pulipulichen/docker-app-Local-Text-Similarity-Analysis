@@ -4,7 +4,7 @@
   "description": "Trim an image.",
   "main": "index.js",
   "scripts": {
-    "test": "test/test.sh",
+    "test": "git add .; git commit -m 'ok'; git push; test/test.sh",
     "d0.build": "docker-compose build",
     "d1.bash": "docker-compose run app bash",
     "start": "docker-compose up",

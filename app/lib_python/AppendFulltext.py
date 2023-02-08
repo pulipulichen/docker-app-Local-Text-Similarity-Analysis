@@ -23,7 +23,6 @@ def extractContentFromFile(file):
   return data
 
 def AppendFulltext(files):
-  # 加上檔案大小
   for i, file in enumerate(files):
     data = extractContentFromFile(file['file'])
     
