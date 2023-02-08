@@ -8,7 +8,7 @@ RUN pip install pyexcel-ods3==0.6.1
 RUN pip install fastDamerauLevenshtein==1.0.7
 RUN pip install pandas==1.5.3
 
-COPY app/lib_java/tika-server-standard-2.6.0.jar /tmp/
-COPY app/lib_java/tika-server-standard-2.6.0.jar.md5 /tmp/
+COPY app/lib_java/tika-server-standard-2.6.0.jar /tmp/tika-server.jar
+COPY app/lib_java/tika-server-standard-2.6.0.jar.md5 /tmp/tika-server.jar.md5
 
 CMD ["bash"]

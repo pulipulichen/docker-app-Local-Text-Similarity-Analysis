@@ -13,7 +13,7 @@ files = AppendSize(files)
 from lib_python.AppendFulltext import *
 files = AppendFulltext(files)
 
-from app.lib_python.Distance.CalcDistanceList import *
+from lib_python.Distance.CalcDistanceList import *
 distance_list = CalcDistanceList(files)
 
 from lib_python.SaveODS import *
