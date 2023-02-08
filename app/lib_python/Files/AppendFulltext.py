@@ -23,10 +23,7 @@ def extractContentFromFile(file):
   return data
 
 def AppendFulltext(files):
-  for i, file in enumerate(files):
-    data = extractContentFromFile(file['file'])
-    
-    # Printing of content 
-    files[i]['data_length'] = len(data)
-    files[i]['data'] = data
+  files['data'] = files['file'].apply(extractContentFromFile)
+  files['data_length'] = len(files['data'])
+
   return files

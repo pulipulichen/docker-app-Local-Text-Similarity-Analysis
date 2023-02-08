@@ -16,11 +16,14 @@ def SaveODS(files, filename):
 
   output = []
   if len(files) > 0:
-    output.append(files[0].keys())
+    output.append(files.columns.values.tolist())
 
-  for file in files:
-    output.append(list(file.values()))
+  print(output)
 
-  # print(output)
+  # for file in files:
+  #   output.append(list(file.values()))
+  output = output + files.to_numpy()
+
+  print(output)
   data.update({"data": output})
   save_data(odsFilepath, data)
