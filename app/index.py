@@ -33,6 +33,9 @@ files['cluster'] = files['user'].replace(cluster_dict)
 from lib_python.Distance.AddNodeAttributes import *
 G = AddNodeAttributes(G, outliers, cluster_dict)
 
+from lib_python.Distance.SortDistanceDataFrame import *
+files = SortDistanceDataFrame(files)
+
 from lib_python.Save.SaveCYJS import *
 SaveCYJS(G, filename)
 
