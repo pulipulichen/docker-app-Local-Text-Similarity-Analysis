@@ -5,8 +5,8 @@ def SaveCYJS(G, filename):
   cyjs = nx.cytoscape_data(G)
 
   pos = nx.spring_layout(G)
-  with cyjs['elements']['nodes'] as nodes:
-    print(nodes)
+  nodes = cyjs['elements']['nodes']
+  print(nodes)
 
 
   cyjs = json.dumps(cyjs, ensure_ascii=False)
