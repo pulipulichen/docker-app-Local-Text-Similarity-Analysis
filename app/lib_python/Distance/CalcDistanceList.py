@@ -11,11 +11,12 @@ def CalcDistanceList(files):
     source = files[pair[0]]
     target = files[pair[1]]
     distance = damerauLevenshtein(source['data'], target['data'], similarity=False)
-    df = pd.concat([df, pd.DataFrame({
+    record = {
       "source": source["user"],
       "target": target["user"],
       "value": distance
-    })])
+    }
+    df = pd.concat([df, pd.DataFrame.from_records([record])])
 
   print(df)
   return df
