@@ -41,9 +41,13 @@ for entry in entries:
       "file": last_entry
     })
 
+
+from datetime import datetime
 # 加上修改時間
 for i, file in enumerate(files):
-  files[i]['modified_time'] = os.path.getmtime(file['file'])
+  time = os.path.getmtime(file['file'])
+  time = datetime.fromtimestamp(time).strftime('%m/%d-% %H:%M:%S')
+  files[i]['modified_time'] = time
 
 # 加上修改時間
 for i, file in enumerate(files):
