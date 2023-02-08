@@ -8,8 +8,8 @@ def ClusteringFIles(df):
   
   # G = nx.barbell_graph(5, 1)
   G = nx.Graph()
-  graph_df = df[['source', 'target', 'value']]
-  graph_df['value'] = 1/graph_df['value']
+  df['weight'] = 1/ df['value']
+  graph_df = df[['source', 'target', 'weight']]
   elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
 
