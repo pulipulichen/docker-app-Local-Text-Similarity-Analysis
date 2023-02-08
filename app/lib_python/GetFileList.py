@@ -1,19 +1,19 @@
 import os
 
 def GetFileList():
-  entries = os.listdir('cache/')
+  entries = os.listdir('cache/files/')
   files = []
   for entry in entries:
-    if os.path.isdir('cache/' + entry) == False:
+    if os.path.isdir('cache/files/' + entry) == False:
       continue
 
-    subentries = os.listdir('cache/' + entry)
+    subentries = os.listdir('cache/files/' + entry)
     max_time = 0
     last_entry = None
     for subentry in subentries:
-      time_m = os.path.getmtime('cache/' + entry + '/' + subentry)
+      time_m = os.path.getmtime('cache/files/' + entry + '/' + subentry)
       if (time_m > max_time):
-        last_entry = 'cache/' + entry + '/' + subentry
+        last_entry = 'cache/files/' + entry + '/' + subentry
     
     if last_entry is not None:
       files.append({

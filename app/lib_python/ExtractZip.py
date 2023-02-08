@@ -4,10 +4,10 @@ from zipfile import ZipFile
 import subprocess
 
 def ExtractZip():
-  subprocess.run(['mv', './cache/.gitignore', '/tmp'], capture_output=True)
-  subprocess.run(['rm', '-rf', './cache'], capture_output=True)
-  subprocess.run(['mkdir', '-p', './cache'], capture_output=True)
-  subprocess.run(['mv', '/tmp/.gitignore', './cache/'], capture_output=True)
+  subprocess.run(['mv', './cache/files/.gitignore', '/tmp'], capture_output=True)
+  subprocess.run(['rm', '-rf', './cache/files'], capture_output=True)
+  subprocess.run(['mkdir', '-p', './cache/files'], capture_output=True)
+  subprocess.run(['mv', '/tmp/.gitignore', './cache/files/'], capture_output=True)
 
   entries = os.listdir('input/')
   for entry in entries:
@@ -16,5 +16,5 @@ def ExtractZip():
 
     with ZipFile('input/' + entry, 'r') as zObject:
       zObject.extractall(
-          path='cache/')
+          path='cache/files/')
     return os.path.splitext(entry)[0]

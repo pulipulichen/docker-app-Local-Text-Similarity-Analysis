@@ -4,10 +4,14 @@ import os
 # import parser object from tike
 from tika import parser  
 
-from cachetools import cached, LRUCache
+from diskcache import cache 
+cache = Cache()
 
-@cached(cache=LRUCache(maxsize=100))
 def extractContentFromFile(file):
+  if file in cache:
+    return cache[file]
+
+  print('Parsing file: ' + file)
   parsed_file = parser.from_file(file)
   data = parsed_file['content'] 
 
@@ -15,6 +19,7 @@ def extractContentFromFile(file):
   while data.find('  ') != -1:
     data = data.replace('  ', ' ')
     
+  cache[file] = data
   return data
 
 def AppendFulltext(files):
