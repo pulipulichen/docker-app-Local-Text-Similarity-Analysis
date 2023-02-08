@@ -42,16 +42,15 @@ for entry in entries:
     })
 
 
-from datetime import datetime
-# 加上修改時間
-for i, file in enumerate(files):
-  time = os.path.getmtime(file['file'])
-  time = datetime.fromtimestamp(time).strftime('%m/%d-% %H:%M:%S')
-  files[i]['modified_time'] = time
+from lib.python.AppendTime import AppendTime
+files = AppendTime(files)
 
-# 加上修改時間
+# 加上檔案大小
 for i, file in enumerate(files):
   file_stats = os.stat(last_entry)
   files[i]['filesize'] = file_stats.st_size / (1024 * 1024)
+
+# 加上檔案內文
+
 
 print(json.dumps(files, indent=4, ensure_ascii=False))
