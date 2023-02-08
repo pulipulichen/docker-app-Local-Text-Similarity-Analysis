@@ -13,7 +13,7 @@ def SaveCYJS(G, filename):
     node["position"] = {}
     node["position"]["x"] = pos[id][0]
     node["position"]["y"] = pos[id][1]
-  print(node)
+  print(nodes)
 
   cyjs = json.dumps(cyjs, ensure_ascii=False)
 
