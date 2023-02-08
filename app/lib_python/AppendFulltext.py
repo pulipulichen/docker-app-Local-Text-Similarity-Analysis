@@ -13,6 +13,10 @@ def AppendFulltext(files):
     # you can also bring text only, by parsed_pdf['text'] 
     # parsed_pdf['content'] returns string 
     data = parsed_file['content'] 
+
+    data = data.replace('\n', ' ')
+    while data.find('  ') != -1:
+      data = data.replace('  ', ' ')
       
     # Printing of content 
     files[i]['data_length'] = len(data)

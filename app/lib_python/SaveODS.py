@@ -8,10 +8,10 @@ def SaveODS(files, filename):
 
   output = []
   if len(files) > 0:
-    output.append(files[0].keys)
+    output.append(files[0].keys())
 
   for file in files:
-    output.append(file.values())
+    output.append(list(file.values()))
 
   print(output)
   data.update({"data": output})
