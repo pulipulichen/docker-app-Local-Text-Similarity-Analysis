@@ -21,8 +21,8 @@ def CalcDistanceDataFrame(files):
     }
     df = pd.concat([df, pd.DataFrame.from_records([record])])
   
-  print(df)
-  return False
+  # print(df)
+  # return False
   
   df = CalcDistanceOutlier(df)
 
