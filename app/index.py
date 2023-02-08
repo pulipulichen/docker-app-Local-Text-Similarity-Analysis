@@ -22,7 +22,7 @@ for entry in entries:
         path='cache/')
 
 entries = os.listdir('cache/')
-files = {}
+files = []
 for entry in entries:
   if os.path.isdir('cache/' + entry) == False:
     continue
@@ -36,6 +36,9 @@ for entry in entries:
       last_entry = 'cache/' + entry + '/' + subentry
   
   if last_entry is not None:
-    files[entry] = last_entry
+    files.append({
+      "user": entry,
+      "file": last_entry
+    })
  
 print(json.dumps(files, indent=4, ensure_ascii=False))
