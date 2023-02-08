@@ -10,7 +10,8 @@ files = AppendTime(files)
 from lib_python.AppendSize import *
 files = AppendSize(files)
 
-# 加上檔案內文
+from lib_python.AppendFulltext import *
+files = AppendFulltext(files)
 
 import json
 print(json.dumps(files, indent=4, ensure_ascii=False))
