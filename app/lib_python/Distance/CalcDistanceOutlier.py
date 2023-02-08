@@ -10,8 +10,8 @@ def CalcDistanceOutlier(df):
   down_bound = q1-1.5*IQR
   up_bound = q3+1.5*IQR
 
-  df['is_outlier'] = df[(df['value'] < down_bound | df['value'] > up_bound)]
+  print(df[(df['value'] < down_bound | df['value'] > up_bound)])
 
-  print(df)
+  # print(df)
 
   return df
