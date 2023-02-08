@@ -26,7 +26,7 @@ def CalcDistanceDataFrame(files):
   
   df = CalcDistanceOutlier(df)
 
-  print(df)
-  return False
+  # print(df)
+  # return False
   df = ClusteringFIles(df)
   return df
