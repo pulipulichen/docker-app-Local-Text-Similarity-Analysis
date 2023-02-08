@@ -13,7 +13,7 @@ def BuildNetwork(df):
   pos = nx.spring_layout(G)
   # print(pos)
   # nx.set_node_attributes(G, pos, name="pos")
-  for n, p in pos.iteritems():
+  for n, p in enumerate(pos):
     G.nodes[n]['pos'] = p
 
   return G
