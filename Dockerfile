@@ -12,6 +12,6 @@ COPY app/lib_java/tika-server-standard-2.6.0.jar /tmp/tika-server.jar
 COPY app/lib_java/tika-server-standard-2.6.0.jar.md5 /tmp/tika-server.jar.md5
 
 RUN pip install networkx==3.0
-RUN pip install diskcache==5.4.0
+RUN pip install python-sqlite-cache==0.0.2
 
 CMD ["bash"]

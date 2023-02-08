@@ -4,12 +4,12 @@ import os
 # import parser object from tike
 from tika import parser  
 
-from diskcache import Cache 
-cache = Cache()
+from sqlite_cache.sqlite_cache import SqliteCache
+sql_cache = SqliteCache('cache')
 
 def extractContentFromFile(file):
-  if file in cache:
-    return cache[file]
+  if sql_cache.get(file) != None:
+    return sql_cache.get(file)
 
   print('Parsing file: ' + file)
   parsed_file = parser.from_file(file)
@@ -19,7 +19,7 @@ def extractContentFromFile(file):
   while data.find('  ') != -1:
     data = data.replace('  ', ' ')
     
-  cache[file] = data
+  sql_cache.set(file, data)
   return data
 
 def AppendFulltext(files):

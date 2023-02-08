@@ -28,8 +28,8 @@ def ClusteringFIles(df):
   # output = sorted(map(sorted, next_level_communities))
   # print(output)
 
-  output = community.louvain_communities(G, weight='weight', seed=123)
-  print(output)
+  # output = community.louvain_communities(G, weight='weight', seed=123)
+  # print(output)
 
   output = community.louvain_communities(G, weight='weight', resolution = 1.1, seed=123)
   print(output) # 這個就夠了
