@@ -19,6 +19,7 @@ def ExtractZip():
           path='cache/files/')
 
     filename = os.path.splitext(entry)[0]
+    print(filename)
     # if os.path.isdir('cache/files/' + filename):
     #   subprocess.run(['mv', './cache/files/' + filename + '/*', './cache/files/'], capture_output=True)
     #   subprocess.run(['rm', '-rf', './cache/files/' + filename], capture_output=True)
