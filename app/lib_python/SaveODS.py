@@ -20,10 +20,9 @@ def SaveODS(files, filename):
 
   print(output)
 
-  print(files.tolist())
   # for file in files:
   #   output.append(list(file.values()))
-  output = output + files.to_numpy()
+  output = output + list(files.to_numpy())
 
   print(output)
   data.update({"data": output})
