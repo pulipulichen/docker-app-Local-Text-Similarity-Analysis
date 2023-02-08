@@ -12,8 +12,11 @@ def ClusteringFIles(df):
   elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
 
-  communities_generator = community.girvan_newman(G)
-  top_level_communities = next(communities_generator)
-  next_level_communities = next(communities_generator)
-  output = sorted(map(sorted, next_level_communities))
+  # communities_generator = community.girvan_newman(G)
+  # top_level_communities = next(communities_generator)
+  # next_level_communities = next(communities_generator)
+  # output = sorted(map(sorted, next_level_communities))
+  # print(output)
+
+  output = community.louvain_communities(G, weight='weight', seed=123)
   print(output)
