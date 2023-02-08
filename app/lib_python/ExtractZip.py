@@ -14,3 +14,4 @@ def ExtractZip():
     with ZipFile('input/' + entry, 'r') as zObject:
       zObject.extractall(
           path='cache/')
+    return os.path.splitext(entry)[0]

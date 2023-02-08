@@ -1,5 +1,5 @@
 from lib_python.ExtractZip import *
-ExtractZip()
+filename = ExtractZip()
 
 from lib_python.GetFileList import *
 files = GetFileList()
@@ -13,5 +13,5 @@ files = AppendSize(files)
 from lib_python.AppendFulltext import *
 files = AppendFulltext(files)
 
-import json
-print(json.dumps(files, indent=4, ensure_ascii=False))
+from lib_python.SaveODS import *
+SaveODS(files, filename)
