@@ -8,7 +8,8 @@ def ClusteringFIles(df):
   
   # G = nx.barbell_graph(5, 1)
   G = nx.Graph()
-  elist = list(df.itertuples(index=False))
+  graph_df = df[['source', 'target', 'value']]
+  elist = list(graph_df.itertuples(index=False))
   G.add_weighted_edges_from(elist)
 
   communities_generator = community.girvan_newman(G)
