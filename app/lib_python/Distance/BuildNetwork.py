@@ -12,6 +12,6 @@ def BuildNetwork(df):
 
   pos = nx.spring_layout(G)
   print(pos)
-  nx.set_node_attributes(G, 'pos', pos)
+  nx.set_node_attributes(G, pos, name="pos")
 
   return G
