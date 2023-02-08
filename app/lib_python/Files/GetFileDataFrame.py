@@ -24,4 +24,7 @@ def GetFileDataFrame():
         "file": last_entry
       }
       df = pd.concat([df, pd.DataFrame.from_records([record])])
+
+
+  print(df)
   return df
