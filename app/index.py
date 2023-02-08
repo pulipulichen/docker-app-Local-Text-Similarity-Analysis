@@ -5,6 +5,8 @@ from pathlib import Path
 
 entries = os.listdir('input/')
 for entry in entries:
+  if (!entry.endswith('.zip')):
+    continue
   print(entry)
   file_stats = os.stat('input/' + entry)
   print(file_stats.st_size)
