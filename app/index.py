@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 from zipfile import ZipFile
-
+import json
 import subprocess
 
 subprocess.call(['rm', '-rf', 'rm !(\.gitignore)'])
@@ -35,4 +35,4 @@ for entry in entries:
   if last_entry is not None:
     files[entry] = last_entry
  
-print(files, indent=4)
+print(json.dumps(files, indent=4))
