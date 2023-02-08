@@ -8,6 +8,7 @@ def ExtractZip():
   print(subprocess.call(['rm', '-rf', '/cache/*']))
   print(subprocess.call(['mv', '/tmp/.gitignore', '/cache/']))
 
+  return False
   entries = os.listdir('input/')
   for entry in entries:
     if entry.endswith('.zip') == False:
