@@ -1,0 +1,387 @@
+{
+  "format_version" : "1.0",
+  "generated_by" : "cytoscape-3.9.1",
+  "target_cytoscapejs_version" : "~2.1",
+  "data" : {
+    "shared_name" : "20230116022712_作業1 人文學者資訊行為研究閱讀心得撰寫_8份.json",
+    "name" : "20230116022712_作業1 人文學者資訊行為研究閱讀心得撰寫_8份.json",
+    "SUID" : 916,
+    "__Annotations" : [ ],
+    "selected" : true
+  },
+  "elements" : {
+    "nodes" : [ {
+      "data" : {
+        "id" : "974",
+        "shared_name" : "4000001牛_odt2",
+        "cluster" : 2.0,
+        "name" : "4000001牛_odt2",
+        "SUID" : 974,
+        "id_original" : "4000001牛_odt2",
+        "value" : "4000001牛_odt2",
+        "selected" : false,
+        "is_outlier" : true
+      },
+      "position" : {
+        "x" : -0.12261320390348374,
+        "y" : -9.36407653212106
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "971",
+        "shared_name" : "4000002虎_pdf",
+        "cluster" : 1.0,
+        "name" : "4000002虎_pdf",
+        "SUID" : 971,
+        "id_original" : "4000002虎_pdf",
+        "value" : "4000002虎_pdf",
+        "selected" : false,
+        "is_outlier" : true
+      },
+      "position" : {
+        "x" : 1.4466897927809441,
+        "y" : -67.35904438326654
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "968",
+        "shared_name" : "4000005龍_two_files",
+        "cluster" : 0.0,
+        "name" : "4000005龍_two_files",
+        "SUID" : 968,
+        "id_original" : "4000005龍_two_files",
+        "value" : "4000005龍_two_files",
+        "selected" : false,
+        "is_outlier" : false
+      },
+      "position" : {
+        "x" : 90.67863822436607,
+        "y" : -24.705462414924995
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "965",
+        "shared_name" : "4000001人_odt",
+        "cluster" : 2.0,
+        "name" : "4000001人_odt",
+        "SUID" : 965,
+        "id_original" : "4000001人_odt",
+        "value" : "4000001人_odt",
+        "selected" : false,
+        "is_outlier" : true
+      },
+      "position" : {
+        "x" : -0.5383706284092113,
+        "y" : 61.57467900618283
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "962",
+        "shared_name" : "4000002人_pdf2",
+        "cluster" : 1.0,
+        "name" : "4000002人_pdf2",
+        "SUID" : 962,
+        "id_original" : "4000002人_pdf2",
+        "value" : "4000002人_pdf2",
+        "selected" : false,
+        "is_outlier" : true
+      },
+      "position" : {
+        "x" : -90.59832872255447,
+        "y" : -26.203526246462133
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "959",
+        "shared_name" : "4000004蛇_big_file",
+        "cluster" : 0.0,
+        "name" : "4000004蛇_big_file",
+        "SUID" : 959,
+        "id_original" : "4000004蛇_big_file",
+        "value" : "4000004蛇_big_file",
+        "selected" : false,
+        "is_outlier" : false
+      },
+      "position" : {
+        "x" : -89.2001436701039,
+        "y" : 32.85941540473303
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "943",
+        "shared_name" : "4000001鼠_odt_pdf",
+        "cluster" : 2.0,
+        "name" : "4000001鼠_odt_pdf",
+        "SUID" : 943,
+        "id_original" : "4000001鼠_odt_pdf",
+        "value" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "is_outlier" : true
+      },
+      "position" : {
+        "x" : 88.33412820782405,
+        "y" : 33.198015165858834
+      },
+      "selected" : false
+    } ],
+    "edges" : [ {
+      "data" : {
+        "id" : "1046",
+        "source" : "971",
+        "target" : "974",
+        "weight" : 0.5384615384615384,
+        "SUID" : 1046,
+        "source_original" : "4000002虎_pdf",
+        "selected" : false,
+        "target_original" : "4000001牛_odt2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1043",
+        "source" : "968",
+        "target" : "974",
+        "weight" : 0.2548076923076923,
+        "SUID" : 1043,
+        "source_original" : "4000005龍_two_files",
+        "selected" : false,
+        "target_original" : "4000001牛_odt2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1040",
+        "source" : "968",
+        "target" : "971",
+        "weight" : 0.24412393162393164,
+        "SUID" : 1040,
+        "source_original" : "4000005龍_two_files",
+        "selected" : false,
+        "target_original" : "4000002虎_pdf"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1037",
+        "source" : "965",
+        "target" : "974",
+        "weight" : 1.0,
+        "SUID" : 1037,
+        "source_original" : "4000001人_odt",
+        "selected" : false,
+        "target_original" : "4000001牛_odt2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1034",
+        "source" : "965",
+        "target" : "971",
+        "weight" : 0.5384615384615384,
+        "SUID" : 1034,
+        "source_original" : "4000001人_odt",
+        "selected" : false,
+        "target_original" : "4000002虎_pdf"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1031",
+        "source" : "965",
+        "target" : "968",
+        "weight" : 0.2548076923076923,
+        "SUID" : 1031,
+        "source_original" : "4000001人_odt",
+        "selected" : false,
+        "target_original" : "4000005龍_two_files"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1028",
+        "source" : "962",
+        "target" : "974",
+        "weight" : 0.5384615384615384,
+        "SUID" : 1028,
+        "source_original" : "4000002人_pdf2",
+        "selected" : false,
+        "target_original" : "4000001牛_odt2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1025",
+        "source" : "962",
+        "target" : "971",
+        "weight" : 1.0,
+        "SUID" : 1025,
+        "source_original" : "4000002人_pdf2",
+        "selected" : false,
+        "target_original" : "4000002虎_pdf"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1022",
+        "source" : "962",
+        "target" : "968",
+        "weight" : 0.24412393162393164,
+        "SUID" : 1022,
+        "source_original" : "4000002人_pdf2",
+        "selected" : false,
+        "target_original" : "4000005龍_two_files"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1019",
+        "source" : "962",
+        "target" : "965",
+        "weight" : 0.5384615384615384,
+        "SUID" : 1019,
+        "source_original" : "4000002人_pdf2",
+        "selected" : false,
+        "target_original" : "4000001人_odt"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1016",
+        "source" : "959",
+        "target" : "974",
+        "weight" : 0.029380341880341887,
+        "SUID" : 1016,
+        "source_original" : "4000004蛇_big_file",
+        "selected" : false,
+        "target_original" : "4000001牛_odt2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1013",
+        "source" : "959",
+        "target" : "971",
+        "weight" : 0.0,
+        "SUID" : 1013,
+        "source_original" : "4000004蛇_big_file",
+        "selected" : false,
+        "target_original" : "4000002虎_pdf"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1010",
+        "source" : "959",
+        "target" : "968",
+        "weight" : 0.3584401709401709,
+        "SUID" : 1010,
+        "source_original" : "4000004蛇_big_file",
+        "selected" : false,
+        "target_original" : "4000005龍_two_files"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1007",
+        "source" : "959",
+        "target" : "965",
+        "weight" : 0.029380341880341887,
+        "SUID" : 1007,
+        "source_original" : "4000004蛇_big_file",
+        "selected" : false,
+        "target_original" : "4000001人_odt"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1004",
+        "source" : "959",
+        "target" : "962",
+        "weight" : 0.0,
+        "SUID" : 1004,
+        "source_original" : "4000004蛇_big_file",
+        "selected" : false,
+        "target_original" : "4000002人_pdf2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "1001",
+        "source" : "943",
+        "target" : "974",
+        "weight" : 0.983974358974359,
+        "SUID" : 1001,
+        "source_original" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "target_original" : "4000001牛_odt2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "998",
+        "source" : "943",
+        "target" : "971",
+        "weight" : 0.5277777777777778,
+        "SUID" : 998,
+        "source_original" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "target_original" : "4000002虎_pdf"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "995",
+        "source" : "943",
+        "target" : "968",
+        "weight" : 0.2617521367521367,
+        "SUID" : 995,
+        "source_original" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "target_original" : "4000005龍_two_files"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "992",
+        "source" : "943",
+        "target" : "965",
+        "weight" : 0.983974358974359,
+        "SUID" : 992,
+        "source_original" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "target_original" : "4000001人_odt"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "989",
+        "source" : "943",
+        "target" : "962",
+        "weight" : 0.5277777777777778,
+        "SUID" : 989,
+        "source_original" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "target_original" : "4000002人_pdf2"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "977",
+        "source" : "943",
+        "target" : "959",
+        "weight" : 0.03044871794871795,
+        "SUID" : 977,
+        "source_original" : "4000001鼠_odt_pdf",
+        "selected" : false,
+        "target_original" : "4000004蛇_big_file"
+      },
+      "selected" : false
+    } ]
+  }
+}
