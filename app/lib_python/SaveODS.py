@@ -21,6 +21,6 @@ def SaveODS(files, filename):
   for file in files:
     output.append(list(file.values()))
 
-  print(output)
+  # print(output)
   data.update({"data": output})
   save_data(odsFilepath, data)

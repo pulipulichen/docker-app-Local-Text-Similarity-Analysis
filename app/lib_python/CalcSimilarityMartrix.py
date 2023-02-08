@@ -1,5 +1,6 @@
 from fastDamerauLevenshtein import damerauLevenshtein
 
-def BuildSimilarityMartrix(files):
+def CalcSimilarityMartrix(files):
   distance = damerauLevenshtein('ca', 'abc', similarity=False)
+  print(distance)
   return True
