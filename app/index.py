@@ -42,7 +42,7 @@ for entry in entries:
     })
 
 
-from .lib_python.AppendTime import AppendTime
+from lib_python.AppendTime import AppendTime
 files = AppendTime(files)
 
 # 加上檔案大小
