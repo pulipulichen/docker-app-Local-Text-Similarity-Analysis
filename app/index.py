@@ -14,7 +14,24 @@ from lib_python.Files.AppendFulltext import *
 files = AppendFulltext(files)
 
 from lib_python.Distance.CalcDistanceDataFrame import *
-files = CalcDistanceDataFrame(files)
+df = CalcDistanceDataFrame(files)
 
-from lib_python.SaveODS import *
+from lib_python.Distance.CalcDistanceOutlier import *
+df = CalcDistanceOutlier(df)
+
+from lib_python.Distance.GetOutliers import *
+outliers = GetOutliers(df)
+files['is_outlier'] = files['user'].isin(outliers)
+
+from lib_python.Distance.BuildNetwork import *
+G = BuildNetwork(df)
+
+from lib_python.Distance.ClusteringFiles import *
+cluster_dict = ClusteringFiles(G)
+files['cluster'] = files['user'].replace(cluster_dict)
+
+from lib_python.Save.SaveCYJS import *
+SaveCYJS(files, filename)
+
+from lib_python.Save.SaveODS import *
 SaveODS(files, filename)

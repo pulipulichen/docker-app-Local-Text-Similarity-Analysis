@@ -1,9 +1,9 @@
 from itertools import combinations
 from fastDamerauLevenshtein import damerauLevenshtein
 import pandas as pd
-from .CalcDistanceOutlier import *
-from .ClusteringFiles import *
-from .SortDistanceDataFrame import *
+# from .CalcDistanceOutlier import *
+# from .ClusteringFiles import *
+# from .SortDistanceDataFrame import *
 
 def CalcDistanceDataFrame(files):
   df = pd.DataFrame()
@@ -25,11 +25,11 @@ def CalcDistanceDataFrame(files):
   # print(df)
   # return False
   
-  df = CalcDistanceOutlier(df)
+  # df = CalcDistanceOutlier(df)
 
-  # print(df)
-  # return False
-  files = ClusteringFiles(df, files)
+  # # print(df)
+  # # return False
+  # {files, cyjs} = ClusteringFiles(df, files)
 
-  files = SortDistanceDataFrame(files)
-  return files
+  # files = SortDistanceDataFrame(files)
+  return df
