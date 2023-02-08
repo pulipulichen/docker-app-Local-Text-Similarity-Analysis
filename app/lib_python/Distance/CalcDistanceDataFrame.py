@@ -11,7 +11,7 @@ def CalcDistanceDataFrame(files):
   for pair in pairs:
     # print(str(pair[0]) + '-' + str(pair[1]))
     
-    source = files.iloc[[pair[0]]].to_dict('r')
+    source = files.iloc[[pair[0]]].to_dict('r')[0]
     print(source)
     continue
     target = files.iloc[[pair[1]]].to_dict()
