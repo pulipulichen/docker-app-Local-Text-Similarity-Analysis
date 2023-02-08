@@ -13,6 +13,4 @@ def CalcDistanceOutlier(df):
   # df['is_outlier'] = df[df['value'] < down_bound]
   df['is_outlier'] = np.where(df['value'] < down_bound, True, False)
 
-  print(df)
-
   return df

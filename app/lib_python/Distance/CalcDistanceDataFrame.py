@@ -2,6 +2,7 @@ from itertools import combinations
 from fastDamerauLevenshtein import damerauLevenshtein
 import pandas as pd
 from .CalcDistanceOutlier import *
+from .GetOutliers import *
 
 def CalcDistanceDataFrame(files):
   df = pd.DataFrame()
@@ -20,5 +21,7 @@ def CalcDistanceDataFrame(files):
     df = pd.concat([df, pd.DataFrame.from_records([record])])
 
   # print(df)
-  CalcDistanceOutlier(df)
+  df = CalcDistanceOutlier(df)
+
+  outliers = GetOutliers(df)
   return df
