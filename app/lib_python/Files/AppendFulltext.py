@@ -26,7 +26,7 @@ def extractContentFromFile(file):
 #   return len(data)
 
 def getContentFooter(data):
-  return data[len(data) - 100:]
+  return data[len(data) - 100:][::-1]
 
 
 def AppendFulltext(files):
